@@ -38,7 +38,7 @@ html, body {
 .container {
     position: absolute;
     top: 50%;
-    left: 70%;
+    left: 50%; /* FIXED */
     transform: translate(-50%, -50%);
     max-width: 500px;
     padding: 40px;
