@@ -50,15 +50,23 @@ html, body {
     transition: transform 0.2s ease-out;
 }
 
-/* title */
+/* Animated gradient for title */
 h1 {
     font-size: 2.8em;
     margin-bottom: 20px;
-    background: linear-gradient(90deg, #ff0080, #7928ca, #00ffd5);
+    background: linear-gradient(270deg, #ff0080, #7928ca, #00ffd5, #ff0080);
+    background-size: 600% 600%; /* make the gradient large for smooth animation */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: gradientText 5s ease infinite;
 }
 
+/* Keyframes for moving gradient */
+@keyframes gradientText {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 /* description */
 p {
     font-size: 1.2em;
