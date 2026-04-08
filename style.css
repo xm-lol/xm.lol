@@ -66,21 +66,32 @@ p {
     color: #ddd;
 }
 
-/* download button */
+/* Animated gradient for download button */
 .download-btn {
     display: inline-block;
     padding: 15px 35px;
     font-size: 1.2em;
     color: #fff;
-    background: linear-gradient(90deg, #ff0080, #7928ca, #00ffd5);
     border: none;
     border-radius: 50px;
     text-decoration: none;
     box-shadow: 0 5px 20px rgba(0,0,0,0.4);
     transition: all 0.3s ease;
+
+    /* Gradient animation */
+    background: linear-gradient(270deg, #ff0080, #7928ca, #00ffd5, #ff0080);
+    background-size: 600% 600%;
+    animation: gradientMove 5s ease infinite;
 }
 
 .download-btn:hover {
     transform: translateY(-5px) scale(1.05);
     box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* Keyframes for gradient movement */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
